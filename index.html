@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Record - GHZ Composite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo-ghz.png" alt="GHZ Composite">
+            </div>
+            <div class="header-title">
+                <h1>Track Record</h1>
+                <p class="subtitle">Performance Globale de l'École</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats-section">
+            <div class="stats-grid" id="statsGrid"></div>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="filterResult">Résultat</label>
+                    <select id="filterResult">
+                        <option value="all">Tous</option>
+                        <option value="win">Gagnants</option>
+                        <option value="loss">Perdants</option>
+                        <option value="be">Break Even</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterMonth">Mois</label>
+                    <select id="filterMonth">
+                        <option value="all">Tous</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="trades-section">
+            <table class="trades-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Trader</th>
+                        <th>Crypto</th>
+                        <th>RR</th>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody id="tradesBody"></tbody>
+            </table>
+            <div id="noResults" class="no-results" style="display: none;">
+                Aucun trade trouvé
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 GHZ Composite - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

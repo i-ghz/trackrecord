@@ -1,0 +1,347 @@
+/* Reset et Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.main-header {
+    background: #000000;
+    border-bottom: 2px solid #DC143C;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.header-title {
+    flex: 1;
+}
+
+.header-title h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: #999999;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Main Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    flex: 1;
+}
+
+/* Stats Section */
+.stats-section {
+    margin-bottom: 60px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2px;
+    background: #DC143C;
+    border: 2px solid #DC143C;
+}
+
+.stat-card {
+    background: #000000;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: #1a1a1a;
+}
+
+.stat-label {
+    font-size: 0.85em;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 3em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.stat-value.positive {
+    color: #00ff00;
+}
+
+.stat-value.negative {
+    color: #ff0000;
+}
+
+/* Filters Section */
+.filters-section {
+    margin-bottom: 40px;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: #1a1a1a;
+    border: 2px solid #DC143C;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-size: 0.85em;
+    color: #DC143C;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+select {
+    padding: 12px 16px;
+    border: 2px solid #333333;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+select:hover {
+    border-color: #DC143C;
+}
+
+select:focus {
+    outline: none;
+    border-color: #DC143C;
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+}
+
+/* Trades Table */
+.trades-section {
+    margin-bottom: 60px;
+}
+
+.trades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #000000;
+    border: 2px solid #DC143C;
+}
+
+.trades-table thead {
+    background: #DC143C;
+}
+
+.trades-table th {
+    padding: 20px 24px;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+.trades-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid #1a1a1a;
+    color: #ffffff;
+}
+
+.trades-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.trades-table tbody tr:hover {
+    background-color: #1a1a1a;
+}
+
+.trades-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* RR Values */
+.rr-positive {
+    color: #00ff00;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.rr-negative {
+    color: #ff0000;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.rr-neutral {
+    color: #999999;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.badge-win {
+    background: #00ff00;
+    color: #000000;
+}
+
+.badge-loss {
+    background: #ff0000;
+    color: #ffffff;
+}
+
+.badge-be {
+    background: #666666;
+    color: #ffffff;
+}
+
+/* Crypto Tag */
+.crypto-tag {
+    background: #DC143C;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+/* Trader Name */
+.trader-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 80px 20px;
+    color: #666666;
+    font-size: 1.3em;
+}
+
+/* Footer */
+.main-footer {
+    background: #000000;
+    border-top: 2px solid #DC143C;
+    padding: 30px 0;
+    text-align: center;
+    color: #666666;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .header-title h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-value {
+        font-size: 2.5em;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .trades-table {
+        font-size: 0.85em;
+    }
+
+    .trades-table th,
+    .trades-table td {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1.5em;
+    }
+
+    .stat-value {
+        font-size: 2em;
+    }
+
+    .trades-table th,
+    .trades-table td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}
